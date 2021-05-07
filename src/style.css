@@ -22,7 +22,7 @@ a{
     a:visited{
         color: #b10000;
     }
-body, html, #category, #category1, #category2, #threats, #security, #songs, #challenge, #introPage, #introText, #introText p, #sp, #mp, #sp1, #mp1, #multiPage, #singlePage #wordWrap, #wordWrap div, #restriction, #gamePage, #letterBank div, #challengeBank div, #videoPage{
+body, html, #category, #category1, #category2, #threats, #insider, #songs, #challenge, #introPage, #introText, #introText p, #sp, #mp, #sp1, #mp1, #multiPage, #singlePage #wordWrap, #wordWrap div, #restriction, #gamePage, #letterBank div, #challengeBank div, #videoPage{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -108,17 +108,17 @@ body, html, #category, #category1, #category2, #threats, #security, #songs, #cha
     #category1{
         margin-bottom: 30px;
     }
-    #threats, #security, #songs, #challenge{
+    #threats, #insider, #songs, #challenge{
         float: left;
         width: 48%;
         height: 100%;
-        font-size: 70px;
+        font-size: 50px;
         line-height: 150px;
         text-align: center;
         border: 1px solid black;
         cursor: pointer;
     }
-    #challenge, #security{
+    #challenge, #insider{
         float: right;
     }
     #threats{
@@ -128,7 +128,7 @@ body, html, #category, #category1, #category2, #threats, #security, #songs, #cha
         background: -moz-linear-gradient(left, #000081, white);
         background: linear-gradient(to right, #000081, white);
     }
-    #security{
+    #insider{
         background: #147b14;
         background: -webkit-linear-gradient(left, white, #147b14);
         background: -o-linear-gradient(right, white, #147b14);
@@ -374,7 +374,7 @@ body, html, #category, #category1, #category2, #threats, #security, #songs, #cha
         #category1{
             margin-bottom: 20px;
         }
-        #threats, #security, #songs, #challenge{
+        #threats, #insider, #songs, #challenge{
             font-size: 35px;
             line-height: 80px;
         }
@@ -655,4 +655,8 @@ body, html, #category, #category1, #category2, #threats, #security, #songs, #cha
         bottom: 15px;
         font-size: 10px;
     }
+}
+
+#home-button:hover{
+cursor: pointer;
 }
