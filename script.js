@@ -8,9 +8,8 @@ var threatQuestions = ["A malware that threatens to publish or blocks access to 
 var threatAnswers = ["Ransomeware", "Denial of Service", "Man in the Middle", "Virus", "Spyware"];
 var insiderQuestions = ["Some who has legitimate access to the system but is abusing their privileges", "An entity of trust who misuses their privileges, deliberately or accidentally, in a way that constitutes a threat", "An insider’s use of IT to direct specific harm at an organization or an individual", "An insider’s use of IT to steal IP from the organization. This category includes industrial espionage involving outsiders"];
 var insiderAnswers = ["Insider threats", "Accidental threats", "IT sabotage", "Theft of intellectual property"];
-// var phrases = ["Early bird gets the worm", "Read between the lines", "I can eat a horse", "Twenty-four seven", "Cat got your tounge", "One in one million", "I beg to differ", "Easier said than done", "Add insult to injury", "Don't cry over spilled milk", "Curiosity killed the cat", "Two peas in a pod", "That's the last straw", "Piece of cake", "Speak of the devil", "Go the whole nine yards", "An eye for an eye", "Hit the hay", "Stab someone in the back", "Quit cold turkey", "Cut to the chase", "Best of both worlds", "Kill two birds with one stone", "Break a leg", "Hit the nail on the head", "Kick the bucket"];
-var movies = ["Frankly, my dear, I don't give a damn", "May the Force be with you", "Titanic", "After all this time? Always.", "Life is like a box of chocolates", "To infinity and beyond", "I'll be back", "Wax on, wax off", "I'm going to make him an offer he can't refuse", "Want to know how I got these scars?", "Citizen Kane", "Team Edward", "No, I am your father", "Do or do not. There is no try.", "Do you want to build a snowman?", "Hakuna Matata", "Go ahead, make my day", "Bond. James Bond.", "You're going to need a bigger boat", "You talkin' to me?", "Here's Johnny!", "The hills are alive!", "Toto, I have a feeling we're not in Kansas anymore", "Welcome to Jurassic Park", "Say hello to my little friend!", "Run Forest Run!"];
-var songs = ["I came in like a wrecking ball", "Yesterday all my troubles seemed so far away", "Work, work, work, work, work", "Just a small town girl", "I still haven't found what I'm looking for", "Annie are you OK?", "Nah nah nah nah nah nah nah, nah nah nah nah, hey Jude", "Is this the real life? Is this just fantasy?", "We don't need no education", "Have you ever seen the rain?", "She's got eyes of the bluest skys", "So close, no matter how far", "I don't want to miss a thing", "Take my hand, we'll make it, I swear", "That's me in the corner", "A mulatto, an albino, a mosquito, my libido", "You've been thunderstruck", "Another one bites the dust", "Eye of the tiger", "B-B-B-Bennie and the Jets", "Sing us a song you're the piano man", "Hello darkness my old friend", "Somewhere over the rainbow blue birds fly", "Don't worry about a thing", "Imagine there's no heaven", "Can you feel the love tonight?"];
+var riskQuestions = ["A security event that compromises the confidentiality, integrity, or availability of an information asset", "Supports the principle of least privilege by providing that only authorized entities should have access to information on a need-to-know basis", "The probability that a particular threat will exploit a particular vulnerability with a particular harmful result", "A system is considered to be secure once it has all the 3 attributes necessary to be present in them. What is the common acronym of those attributes", "A type of virus that first attacks on a single computer and then eventually spread into all computers in the network"];
+var riskAnswers = ["Incident", "Confidentiality", "Risk", "CIA", "Worm"];
 
 
 function sp() {
@@ -42,12 +41,12 @@ function insider() {
     document.getElementById('question').innerHTML = insiderQuestions[rand];
     hangman();
 }
-
-function song() {
-    rand = Math.floor(Math.random() * songs.length);
-    word = songs[rand];
+function risk() {
+    rand = Math.floor(Math.random() * riskAnswers.length);
+    word = riskAnswers[rand];
     document.getElementById('singlePage').style.display = "none";
-    document.getElementById('categoryName').innerHTML = "Song titles and lyrics";
+    document.getElementById('categoryName').innerHTML = "Risk";
+    document.getElementById('question').innerHTML = riskQuestions[rand];
     hangman();
 }
 
@@ -883,9 +882,9 @@ function reset() {
         insiderAnswers.splice(rand, 1);
         insider();
     }
-    else if (songs.indexOf(word) > -1) {
-        songs.splice(rand, 1);
-        song();
+    else if (riskAnswers.indexOf(word) > -1) {
+        riskAnswers.splice(rand, 1);
+        risk();
     }
     else if (document.getElementById('charcount').innerHTML > 0) {
         document.getElementById('gamePage').style.display = "none";

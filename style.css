@@ -22,7 +22,7 @@ a{
     a:visited{
         color: #b10000;
     }
-body, html, #category, #category1, #category2, #threats, #insider, #songs, #challenge, #introPage, #introText, #introText p, #sp, #mp, #sp1, #mp1, #multiPage, #singlePage #wordWrap, #wordWrap div, #restriction, #gamePage, #letterBank div, #challengeBank div, #videoPage{
+body, html, #category, #category1, #category2, #threats, #insider, #risk, #challenge, #introPage, #introText, #introText p, #sp, #mp, #sp1, #mp1, #multiPage, #singlePage #wordWrap, #wordWrap div, #restriction, #gamePage, #letterBank div, #challengeBank div, #videoPage{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -111,7 +111,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #songs, #chal
     #category1{
         margin-bottom: 30px;
     }
-    #threats, #insider, #songs, #challenge{
+    #threats, #insider, #risk, #challenge{
         float: left;
         width: 48%;
         height: 100%;
@@ -138,7 +138,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #songs, #chal
         background: -moz-linear-gradient(right, white, #147b14);
         background: linear-gradient(to right, white, #147b14);
     }
-    #songs{
+    #risk{
         background: #bc7a00;
         background: -webkit-linear-gradient(left, #bc7a00, white);
         background: -o-linear-gradient(left, #bc7a00, white);
@@ -390,7 +390,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #songs, #chal
         #category1{
             margin-bottom: 20px;
         }
-        #threats, #insider, #songs, #challenge{
+        #threats, #insider, #risk, #challenge{
             font-size: 35px;
             line-height: 80px;
         }
