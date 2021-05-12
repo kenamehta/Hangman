@@ -22,7 +22,7 @@ a{
     a:visited{
         color: #b10000;
     }
-body, html, #category, #category1, #category2, #threats, #insider, #risk, #challenge, #introPage, #introText, #introText p, #sp, #mp, #sp1, #mp1, #multiPage, #singlePage #wordWrap, #wordWrap div, #restriction, #gamePage, #letterBank div, #challengeBank div, #videoPage{
+body, html, #category, #category1, #category2, #threats, #insider, #risk, #attacks, #challenge, #introPage, #introText, #introText p, #sp, #mp, #sp1, #mp1, #multiPage, #singlePage #wordWrap, #wordWrap div, #restriction, #gamePage, #letterBank div, #challengeBank div, #videoPage{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -111,7 +111,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #risk, #chall
     #category1{
         margin-bottom: 30px;
     }
-    #threats, #insider, #risk, #challenge{
+    #threats, #insider, #risk, #attacks, #challenge{
         float: left;
         width: 48%;
         height: 100%;
@@ -121,7 +121,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #risk, #chall
         border: 1px solid black;
         cursor: pointer;
     }
-    #challenge, #insider{
+    #attacks, #insider{
         float: right;
     }
     #threats{
@@ -145,7 +145,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #risk, #chall
         background: -moz-linear-gradient(left, #bc7a00, white);
         background: linear-gradient(to right, #bc7a00, white);
     }
-    #challenge{
+    #attacks{
         background: #b10000;
         background: -webkit-linear-gradient(left, white, #b10000);
         background: -o-linear-gradient(right, white, #b10000);
@@ -390,7 +390,7 @@ body, html, #category, #category1, #category2, #threats, #insider, #risk, #chall
         #category1{
             margin-bottom: 20px;
         }
-        #threats, #insider, #risk, #challenge{
+        #threats, #insider, #risk, #attacks{
             font-size: 35px;
             line-height: 80px;
         }

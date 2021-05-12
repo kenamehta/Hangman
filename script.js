@@ -10,6 +10,8 @@ var insiderQuestions = ["Some who has legitimate access to the system but is abu
 var insiderAnswers = ["Insider threats", "Accidental threats", "IT sabotage", "Theft of intellectual property"];
 var riskQuestions = ["A security event that compromises the confidentiality, integrity, or availability of an information asset", "Supports the principle of least privilege by providing that only authorized entities should have access to information on a need-to-know basis", "The probability that a particular threat will exploit a particular vulnerability with a particular harmful result", "A system is considered to be secure once it has all the 3 attributes necessary to be present in them. What is the common acronym of those attributes", "A type of virus that first attacks on a single computer and then eventually spread into all computers in the network"];
 var riskAnswers = ["Incident", "Confidentiality", "Risk", "CIA", "Worm"];
+var attacksQuestions = ["Malefactor runs a SQL database query from the client to server through the input data", "Using web services of third parties to execute web browser scripts or script applications of a victim", "Network traffic interception", "A software hidden in a valuable program which normally performs as a backdoor feature in the system", "Sending emails that claim to be from reputable sources in order to obtain sensitive information or persuade recipients to do something", "An intruder intercepts and saves old messages before attempting to transmit them later as one of the original participants"];
+var attacksAnswers = ["SQL Injection", "Cross site scripting", "Eavesdropping", "Trojan", "Phishing", "Replay"];
 
 
 function sp() {
@@ -45,8 +47,17 @@ function risk() {
     rand = Math.floor(Math.random() * riskAnswers.length);
     word = riskAnswers[rand];
     document.getElementById('singlePage').style.display = "none";
-    document.getElementById('categoryName').innerHTML = "Risk";
+    document.getElementById('categoryName').innerHTML = "Risks";
     document.getElementById('question').innerHTML = riskQuestions[rand];
+    hangman();
+}
+
+function attacks() {
+    rand = Math.floor(Math.random() * attacksAnswers.length);
+    word = attacksAnswers[rand];
+    document.getElementById('singlePage').style.display = "none";
+    document.getElementById('categoryName').innerHTML = "Attacks";
+    document.getElementById('question').innerHTML = attacksQuestions[rand];
     hangman();
 }
 
@@ -886,11 +897,9 @@ function reset() {
         riskAnswers.splice(rand, 1);
         risk();
     }
-    else if (document.getElementById('charcount').innerHTML > 0) {
-        document.getElementById('gamePage').style.display = "none";
-        document.getElementById('input').value = "";
-        document.getElementById('charcount').innerHTML = "0";
-        document.getElementById('multiPage').style.display = "block";
+    else if (attacksAnswers.indexOf(word) > -1) {
+        attacksAnswers.splice(rand, 1);
+        attacks();
     }
     // else {
     //     challenge();
