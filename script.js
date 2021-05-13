@@ -18,13 +18,23 @@ function sp() {
     document.getElementById('introPage').style.display = "none";
     document.getElementById('multiPage').style.display = "none";
     document.getElementById('singlePage').style.display = "block";
+    document.getElementById('instructionPage').style.display = "none";
 }
 
 function mp() {
     document.getElementById('introPage').style.display = "none";
     document.getElementById('singlePage').style.display = "none";
     document.getElementById('multiPage').style.display = "block";
+    document.getElementById('instructionPage').style.display = "none";
 }
+
+function ip() {
+    document.getElementById('introPage').style.display = "none";
+    document.getElementById('singlePage').style.display = "none";
+    document.getElementById('multiPage').style.display = "none";
+    document.getElementById('instructionPage').style.display = "block";
+}
+
 
 function threats() {
     rand = Math.floor(Math.random() * threatAnswers.length);
