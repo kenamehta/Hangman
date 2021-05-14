@@ -691,9 +691,14 @@ body, html, #category, #category1, #category2, #threats, #insider, #risk, #attac
  }
 
  #instructionPage{
-    display: none;
-    height: 560px;
-    width: 845px;
-    font-size: large;
+    background-color: white;
+    border-radius: 30px;
+    padding:20px;
+   display: none;
+   height: 750px;
+   width: 845px;
+   font-size: large;
+   overflow-y: scroll;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
 }
  

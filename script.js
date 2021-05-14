@@ -32,6 +32,7 @@ function ip() {
     document.getElementById('introPage').style.display = "none";
     document.getElementById('singlePage').style.display = "none";
     document.getElementById('multiPage').style.display = "none";
+    document.getElementById('gamePage').style.display = "none";
     document.getElementById('instructionPage').style.display = "block";
 }
 
